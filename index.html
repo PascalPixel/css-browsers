@@ -1,152 +1,150 @@
 <html>
-<head>
-	<title>CSS Browser</title>
-	<meta charset='utf-8'>
-	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<style>
-		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,table,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-			border: 0;
-			vertical-align: baseline;
-			text-rendering: optimizeLegibility;
-			-webkit-font-smoothing: antialiased;
-		}
-		
-		body {
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			color: #979374;
-			background: #eeeeee;
-			padding: 20px;
-		}
-		.browser .btn {
-		  cursor: pointer;  
-		}
-		
-		.browser a {
-			color: inherit;
-		}
-		.browser a:hover, .browser a.hover {
-			text-decoration: none;
-		}
-		
-		.browser {
-			border: 1px solid rgba(0,0,0,0.4);
-			border-radius: 7px;
-			background-color: white;
-			box-shadow: 0px 3px 5px rgba(0,0,0,0.14);
-			position: relative;
-			color: #788083;
-		}
-		.browser-toolbar {
-			background-image: -moz-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			background-image: -webkit-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			background-image: -ms-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			box-shadow: inset 0px 1px 0px white;
-			border-bottom: 1px solid rgba(0,0,0,0.4);
-			border-top-left-radius: 7px;
-			border-top-right-radius: 7px;
-			height: 50px;
-			padding: 10px;
-		}
-		.browser-back, .browser-forward {
-			background-image: -moz-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			background-image: -webkit-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			background-image: -ms-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
-			border: 1px solid rgba(0,0,0,0.3);
-			box-shadow: inset 0px 1px 0px white, 0px 1px 0px rgba(255,255,255,0.7);
-			height: 30px;
-			width: 35px;
-			padding: 5px 10px;
-			display: inline-block;
-			margin-right: -5px;
-			text-shadow: 0px 1px 0px rgba(255,255,255,0.7);
-		}
-		.browser-back {
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
-		.browser-forward {
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
-		.browser-address {
-			background: white;
-			border: 1px solid rgba(0,0,0,0.4);
-			display: inline-block;
-			position: absolute;
-			left: 90px;
-			right: 10px;
-			border-radius: 5px;
-			padding: 5px 10px;
-			height: 30px;
-			box-shadow: inset 0px 1px 2px rgba(0,0,0,0.2), 0px 1px 0px rgba(255,255,255,0.7);
-		}
-		.browser-content {
-			position: relative;
-			height: 800px;
-			border-radius: 7px;
-			overflow: hidden;
-		}
-		.browser-content iframe {
-			border: none;
-			height: 100%;
-			width: 100%;
-		}
-		.browser-reload {
-			font-weight: bold;
-		}
-	</style>
-</head>
-
-<body>
-	<div class="browser">
-		<div class="browser-toolbar">
-			<a class="browser-back" href="#">&#9668;</a>
-			<a class="browser-forward" href="#">&#9658;</a>
-			<div class="browser-address">
-				<span style="color:#BBBBBB;">https://</span>superpencil.com <a class="browser-reload pull-right" href="#">&#x21bb;</a>
+	<head>
+		<title>CSS iFrame Browser</title>
+		<meta charset='utf-8'>
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<style>
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #979374;
+				background: #eeeeee;
+				padding: 20px;
+			}
+			html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,table,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+				border: 0;
+				vertical-align: baseline;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+			}
+			.browser *, .browser *:before, .browser *:after {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.browser .pull-right {
+				float:right;
+			}
+			.browser .btn {
+			  cursor: pointer;  
+			}
+			.browser a {
+				color: inherit;
+				text-decoration: none;
+			}
+			.browser a:hover, .browser a.hover {
+				text-decoration: none;
+			}
+			.browser {
+				border: 1px solid rgba(0,0,0,0.4);
+				border-radius: 7px;
+				background-color: white;
+				box-shadow: 0px 3px 5px rgba(0,0,0,0.14);
+				position: relative;
+				color: #788083;
+				font-size: 14px;
+				line-height: 19px;
+			}
+			.browser-toolbar {
+				background-image: -moz-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				background-image: -webkit-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				background-image: -ms-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				box-shadow: inset 0px 1px 0px white;
+				border-bottom: 1px solid rgba(0,0,0,0.4);
+				border-top-left-radius: 7px;
+				border-top-right-radius: 7px;
+				height: 50px;
+				padding: 10px;
+			}
+			.browser-back, .browser-forward {
+				background-image: -moz-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				background-image: -webkit-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				background-image: -ms-linear-gradient( 90deg, #c8c8c8 0%, #e2e2e2 100%);
+				border: 1px solid rgba(0,0,0,0.3);
+				box-shadow: inset 0px 1px 0px white, 0px 1px 0px rgba(255,255,255,0.7);
+				height: 30px;
+				width: 35px;
+				padding: 5px 10px;
+				display: inline-block;
+				margin-right: -5px;
+				text-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+			}
+			.browser-back {
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			.browser-forward {
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			.browser-address {
+				background: white;
+				border: 1px solid rgba(0,0,0,0.4);
+				display: inline-block;
+				position: absolute;
+				left: 90px;
+				right: 10px;
+				border-radius: 5px;
+				padding: 5px 10px;
+				height: 30px;
+				box-shadow: inset 0px 1px 2px rgba(0,0,0,0.2), 0px 1px 0px rgba(255,255,255,0.7);
+			}
+			.browser-content {
+				position: relative;
+				height: 800px;
+				border-radius: 7px;
+				overflow: hidden;
+			}
+			.browser-content iframe {
+				border: none;
+				height: 100%;
+				width: 100%;
+			}
+			.browser-reload {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="browser">
+			<div class="browser-toolbar">
+				<a class="browser-back" href="#">&#9668;</a>
+				<a class="browser-forward" href="#">&#9658;</a>
+				<div class="browser-address">
+					<span style="color:#BBBBBB;">https://</span>superpencil.com <a class="browser-reload pull-right" href="#">&#x21bb;</a>
+				</div>
+			</div>
+			<div class="browser-content">
+				<iframe id="css_iframe_browser" name="css_iframe_browser" src="http://www.superpencil.com"></iframe>
 			</div>
 		</div>
-		<div class="browser-content">
-			<iframe id="my_frame" name="my_frame" src="http://www.superpencil.com"></iframe>
-		</div>
-	</div>
-	
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript">
-	
-		  $(function()
-		  {
-			var $iframe  = $( '#my_frame' );
-			var frame    = self.frames['my_frame'];
-		
-			$('.browser-home').click( function( event )
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript">
+			  $(function()
 			  {
-				event.preventDefault();
-				frame.location.href = 'http://www.superpencil.com';
+				var $iframe  = $( '#css_iframe_browser' );
+				var frame    = self.frames['css_iframe_browser'];
+				$('.browser-home').click( function( event )
+				  {
+					event.preventDefault();
+					frame.location.href = 'http://www.superpencil.com';
+				  } );
+				  $('.browser-back').click( function( event )
+				  {
+					event.preventDefault();
+					frame.history.back();
+				  } );
+				  $('.browser-forward').click( function( event )
+				  {
+				   event.preventDefault();
+					frame.history.forward();
+				  } );
+				  $('.browser-reload').click( function( event )
+				  {
+					event.preventDefault();
+					frame.location.reload();
+				  } );
 			  } );
-			  
-			  $('.browser-back').click( function( event )
-			  {
-				event.preventDefault();
-				frame.history.back();
-			  } );
-			  
-			  $('.browser-forward').click( function( event )
-			  {
-			   event.preventDefault();
-				frame.history.forward();
-			  } );
-			  
-			  $('.browser-reload').click( function( event )
-			  {
-				event.preventDefault();
-				frame.location.reload();
-			  } );
-		
-		  } );
-		
-	</script>
-</body>
+		</script>
+	</body>
 </html>
