@@ -90,7 +90,7 @@
       }
       .browser-content {
         position: relative;
-        height: 800px;
+        height: 450px;
         overflow: hidden;
       }
       .browser-content iframe {
@@ -109,40 +109,29 @@
         <a class="browser-back" href="#">&#9668;</a>
         <a class="browser-forward" href="#">&#9658;</a>
         <div class="browser-address">
-          <span style="color:#BBBBBB;">https://</span>superpencil.com <a class="browser-reload pull-right" href="#">&#x21bb;</a>
+          <span style="color:#BBBBBB;">http://</span>superpencil.com <a class="browser-reload pull-right" href="#">&#x21bb;</a>
         </div>
       </div>
       <div class="browser-content">
-        <iframe id="css_iframe_browser" name="css_iframe_browser" src="http://www.superpencil.com"></iframe>
+        <iframe id="iframe" name="iframe" src="http://www.polygon.com"></iframe>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
-        $(function()
-        {
-        var $iframe  = $( '#css_iframe_browser' );
-        var frame    = self.frames['css_iframe_browser'];
-        $('.browser-home').click( function( event )
-          {
-          event.preventDefault();
-          frame.location.href = 'http://www.superpencil.com';
-          } );
-          $('.browser-back').click( function( event )
-          {
-          event.preventDefault();
-          frame.history.back();
-          } );
-          $('.browser-forward').click( function( event )
-          {
-           event.preventDefault();
-          frame.history.forward();
-          } );
-          $('.browser-reload').click( function( event )
-          {
-          event.preventDefault();
-          frame.location.reload();
-          } );
-        } );
+        $(document).ready(function() {
+          $('.browser-back').click(function(event) {
+            event.preventDefault();
+            iframe.history.back(); 
+          });
+          $('.browser-forward').click(function(event) {
+            event.preventDefault();
+            iframe.history.forward();
+          });
+          $('.browser-reload').click(function(event) {
+            event.preventDefault();
+            iframe.location.reload();
+          });
+        });
     </script>
   </body>
 </html>
