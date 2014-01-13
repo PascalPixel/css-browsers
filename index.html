@@ -92,11 +92,13 @@
         position: relative;
         overflow: scroll;
         height: 400px;
+        overflow: hidden;
       }
       .browser-content iframe {
         border: none;
-        height: 100%;
+        position: absolute;
         width: 100%;
+        height: 2000px;
       }
       .browser-reload {
         font-weight: bold;
@@ -113,18 +115,20 @@
         </div>
       </div>
       <div class="browser-content">
-        <iframe id="css-browser" name="iframe" src="http://www.polygon.com/" height="100%" width="100%"></iframe>
+        <iframe id="css-browser" name="iframe" src="http://www.polygon.com/"></iframe>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        setTimeout(function(){
-          setInterval(function(){
-              var pos = $('#css-browser').contents().scrollTop();
-              $('#css-browser').contents().scrollTop(pos + 1);
-          }, 100);
-        },5000);
+      
+        //Start autoscroll code
+        setTimeout(function () {
+          $(".browser-content").animate({ scrollTop: "1400px" }, 70000, "linear");
+        }, 2000);
+        //End autoscroll code
+        
+        //Make the buttons work on older browsers (new security doesn't allow this in modern browsers sadly) 
         $('.browser-back').click(function(event) {
           event.preventDefault();
           iframe.history.back(); 
@@ -137,6 +141,7 @@
           event.preventDefault();
           iframe.location.reload();
         });
+        
       });
     </script>
   </body>
