@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CSS iFrame Browser</title>
+    <title>CSS3 Browser</title>
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -90,8 +90,8 @@
       }
       .browser-content {
         position: relative;
-        height: 450px;
-        overflow: hidden;
+        overflow: scroll;
+        height: 400px;
       }
       .browser-content iframe {
         border: none;
@@ -109,29 +109,35 @@
         <a class="browser-back" href="#">&#9668;</a>
         <a class="browser-forward" href="#">&#9658;</a>
         <div class="browser-address">
-          <span style="color:#BBBBBB;">http://</span>superpencil.com <a class="browser-reload pull-right" href="#">&#x21bb;</a>
+          <span class="url">http://polygon.com</span> <a class="browser-reload pull-right" href="#">&#x21bb;</a>
         </div>
       </div>
       <div class="browser-content">
-        <iframe id="iframe" name="iframe" src="http://www.polygon.com"></iframe>
+        <iframe id="css-browser" name="iframe" src="http://www.polygon.com/" height="100%" width="100%"></iframe>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-          $('.browser-back').click(function(event) {
-            event.preventDefault();
-            iframe.history.back(); 
-          });
-          $('.browser-forward').click(function(event) {
-            event.preventDefault();
-            iframe.history.forward();
-          });
-          $('.browser-reload').click(function(event) {
-            event.preventDefault();
-            iframe.location.reload();
-          });
+      $(document).ready(function() {
+        setTimeout(function(){
+          setInterval(function(){
+              var pos = $('#css-browser').contents().scrollTop();
+              $('#css-browser').contents().scrollTop(pos + 1);
+          }, 100);
+        },5000);
+        $('.browser-back').click(function(event) {
+          event.preventDefault();
+          iframe.history.back(); 
         });
+        $('.browser-forward').click(function(event) {
+          event.preventDefault();
+          iframe.history.forward();
+        });
+        $('.browser-reload').click(function(event) {
+          event.preventDefault();
+          iframe.location.reload();
+        });
+      });
     </script>
   </body>
 </html>
