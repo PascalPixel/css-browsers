@@ -1,6 +1,6 @@
 {
   "name": "css-browsers",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "CSS based browser frames",
   "style": "css-browsers.css",
   "scripts": {

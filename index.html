@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>css-browsers v2.1.0</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
   <link href="css-browsers.css" rel="stylesheet" type="text/css">
   <style>
@@ -15,20 +14,17 @@
       color: #555555;
     }
 
-    .superpencil .tag-primary {
+    .superpencil {
       background-color: #FCE400;
       color: #774701;
       font-family: "Avenir Next", "Avenir", "Helvetica", "Arial", sans-serif;
-      padding: 4px 5px 3px;
-      color: #774701;
-      font-size: 10px;
-      font-smooth: auto;
-      -webkit-font-smoothing: subpixel-antialiased;
     }
 
     .superpencil img {
-      width: 15px;
-      margin-top: -1px;
+      height: 1.2em;
+      width: auto;
+      display: inline-block;
+      margin-top: -0.1em;
     }
   </style>
 </head>
@@ -38,12 +34,12 @@
     <br />
     <h1>css-browsers v2.1.0</h1>
     <p>
-      Easily print out different browsers into a shared HTML frame
+      Easily print out different browsers into a shared HTML frame &#x262f;
     </p>
     <p>
       Github
       <a href="https://github.com/Superpencil/css-browsers">css-browsers</a>
-      <iframe src="https://ghbtns.com/github-btn.html?user=Superpencil&repo=css-browsers&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=Superpencil&amp;repo=css-browsers&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="90px" height="25px" style="padding-top: 5px; margin-bottom: -5px;"></iframe>
     </p>
     <p>
       Demo
@@ -55,46 +51,59 @@
     </p>
     <p>
       Design and Development by
-      <a alt="Superpencil" class="superpencil" href="http://www.superpencil.com/?utm_source=css-browsers&utm_medium=footer+link&utm_campaign=project">
-        <b class="tag tag-primary">
-          <img src="superpencil.svg" alt="Superpencil" />
-          Superpencil
-        </b>
+      <a alt="Superpencil" href="http://www.superpencil.com/?utm_source=css-browsers&utm_medium=footer+link&utm_campaign=project" class="tag tag-primary superpencil">
+        <img src="superpencil.svg" alt="Superpencil" /> Superpencil
       </a>
     </p>
-
     <hr />
-
     <div class="css-browsers">
-      <div class="toolbar">
-        <a class="brbtn back" href="#">&#9668;</a>
-        <a class="brbtn forward" href="#">&#9658;</a>
-        <div class="address">
-          <span class="url">http://polygon.com/</span>
-          <a class="reload pull-right" href="#">&#x21bb;</a>
+      <div class="css-browsers-toolbar">
+        <a class="css-browsers-btn css-browsers-back" href="#">
+          ◄
+        </a>
+        <a class="css-browsers-btn css-browsers-forward" href="#">
+          ►
+        </a>
+        <div class="css-browsers-address">
+          <span class="css-browsers-url">
+            http://superpencil.com/
+          </span>
+          <a class="css-browsers-reload" href="#">
+            ↻
+          </a>
         </div>
       </div>
-      <div class="content">
-        <h1 class="centered">Basic frame</h1>
+      <div class="css-browsers-content">
+        <h1>
+          Basic frame
+        </h1>
       </div>
     </div>
     <br />
-
     <div class="css-browsers css-browsers-safari-7">
-      <div class="toolbar">
-        <a class="brbtn back" href="#">&#9668;</a>
-        <a class="brbtn forward" href="#">&#9658;</a>
-        <div class="address">
-          <span class="url">http://polygon.com/</span>
-          <a class="reload pull-right" href="#">&#x21bb;</a>
+      <div class="css-browsers-toolbar">
+        <a class="css-browsers-btn css-browsers-back" href="#">
+          ◄
+        </a>
+        <a class="css-browsers-btn css-browsers-forward" href="#">
+          ►
+        </a>
+        <div class="css-browsers-address">
+          <span class="css-browsers-url">
+            http://superpencil.com/
+          </span>
+          <a class="css-browsers-reload" href="#">
+            ↻
+          </a>
         </div>
       </div>
-      <div class="content">
-        <h1 class="centered">Safari 7</h1>
+      <div class="css-browsers-content">
+        <h1>
+          Safari 7
+        </h1>
       </div>
     </div>
     <br />
-
   </div>
 </body>
 
