@@ -1,0 +1,31 @@
+{
+  "name": "css-browsers",
+  "version": "2.0.0",
+  "description": "CSS based browser frames",
+  "style": "dist/css-browsers.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Superpencil/css-browsers.git"
+  },
+  "keywords": [
+    "browser",
+    "css",
+    "design",
+    "frontend",
+    "css",
+    "sass",
+    "frame",
+    "window",
+    "wrapper",
+    "iframe"
+  ],
+  "author": "Pascal Pixel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Superpencil/css-browsers/issues"
+  },
+  "homepage": "http://superpencil.com/projects/css-browsers/"
+}

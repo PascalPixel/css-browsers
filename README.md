@@ -1,3 +1,3 @@
-CSS3 Browser
-============
-![alt text](http://cl.ly/image/1n1F1H0J1T16/css-browser.png "screenshot")
+# CSS Browsers
+## CSS based browser frames/windows
+![alt text](css-browser.png "screenshot")
