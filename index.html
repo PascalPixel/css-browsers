@@ -1,17 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>css-browsers v2.1.0</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link href="css-browsers.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: #EDEDED;
+      color: #555555;
+    }
+
+    .superpencil .tag-primary {
+      background-color: #FCE400;
+      color: #774701;
+      font-family: "Avenir Next", "Avenir", "Helvetica", "Arial", sans-serif;
+      padding: 4px 5px 3px;
+      color: #774701;
+      font-size: 10px;
+      font-smooth: auto;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .superpencil img {
+      width: 15px;
+      margin-top: -1px;
+    }
+  </style>
 </head>
+
 <body>
-<h1 id="cssbrowsers">CSS Browsers</h1>
+  <div class="container">
+    <br />
+    <h1>css-browsers v2.1.0</h1>
+    <p>
+      Easily print out different browsers into a shared HTML frame
+    </p>
+    <p>
+      Github
+      <a href="https://github.com/Superpencil/css-browsers">css-browsers</a>
+      <iframe src="https://ghbtns.com/github-btn.html?user=Superpencil&repo=css-browsers&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+    </p>
+    <p>
+      Demo
+      <a href="http://github.superpencil.com/css-browsers">github.superpencil.com/css-browsers</a>
+    </p>
+    <p>
+      Install
+      <code>npm install css-browsers</code>
+    </p>
+    <p>
+      Design and Development by
+      <a alt="Superpencil" class="superpencil" href="http://www.superpencil.com/?utm_source=css-browsers&utm_medium=footer+link&utm_campaign=project">
+        <b class="tag tag-primary">
+          <img src="superpencil.svg" alt="Superpencil" />
+          Superpencil
+        </b>
+      </a>
+    </p>
 
-<h2 id="cssbasedbrowserframeswindows">CSS based browser frames/windows</h2>
+    <hr />
 
-<figure>
-<img src="css-browser.png" alt="alt text" title="screenshot" />
-<figcaption>alt text</figcaption>
-</figure>
+    <div class="css-browsers">
+      <div class="toolbar">
+        <a class="brbtn back" href="#">&#9668;</a>
+        <a class="brbtn forward" href="#">&#9658;</a>
+        <div class="address">
+          <span class="url">http://polygon.com/</span>
+          <a class="reload pull-right" href="#">&#x21bb;</a>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="centered">Basic frame</h1>
+      </div>
+    </div>
+    <br />
 
+    <div class="css-browsers css-browsers-safari-7">
+      <div class="toolbar">
+        <a class="brbtn back" href="#">&#9668;</a>
+        <a class="brbtn forward" href="#">&#9658;</a>
+        <div class="address">
+          <span class="url">http://polygon.com/</span>
+          <a class="reload pull-right" href="#">&#x21bb;</a>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="centered">Safari 7</h1>
+      </div>
+    </div>
+    <br />
+
+  </div>
 </body>
+
 </html>
